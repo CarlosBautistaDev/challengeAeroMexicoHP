@@ -549,18 +549,6 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
-    },
-    {
-      "id": 1661326028296,
-      "alive": true,
-      "name": "",
-      "dateOfBirth": "",
-      "eyeColour": "",
-      "hairColour": "",
-      "gender": "",
-      "hogwartsStudent": false,
-      "hogwartsStaff": false,
-      "image": ""
     }
   ]
 }

@@ -1,0 +1,242 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+
+  @media (max-width: 720px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modalHeader {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader #close {
+  cursor: pointer;
+}
+
+.modalHeader p {
+  margin: 0px 0px 10px 34px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  color: #000000;
+
+  @media (max-width: 480px) {
+    margin: 0px 0px 6px 24px;
+    font-size: 20px;
+  }
+}
+
+.modalHeader span {
+  margin-right: 34px;
+
+  @media (max-width: 480px) {
+    margin-right: 24px;
+  }
+}
+
+.inputText {
+  margin: 14px 34px 0px 34px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    margin: 14px 24px 0px 24px;
+  }
+}
+
+.inputText div {
+  padding-bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+}
+
+.inputText p {
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #263238;
+}
+
+.inputText input {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000000;
+  background: #f2f3f3;
+  height: 69px;
+  border-radius: 5.33333px 5.33333px 0px 0px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #a4aaac;
+
+  @media (max-width: 720px) {
+    height: 42px;
+  }
+
+  @media (max-width: 480px) {
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+.inputRadio {
+  margin: 6px 34px 0px 34px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+}
+
+.inputRadio div {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+}
+
+.inputRadio p {
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #263238;
+}
+
+.inputRadio #radio_inputs {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 720px) {
+    justify-content: flex-start;
+    margin: 0px;
+  }
+}
+
+.inputRadio #radio {
+  margin: 0px 10px 0px 0px;
+  min-width: 16px;
+  min-height: 16px;
+  background: #dadada;
+
+  @media (max-width: 720px) {
+    flex-wrap: wrap;
+    max-width: 16px;
+  }
+}
+
+.inputRadio #radio_title {
+  margin: 0px 100px 0px 0px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #263238;
+
+  @media (max-width: 720px) {
+    margin: 0px;
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+.inputFile {
+  margin: 20px 34px 10px 34px;
+  display: flex;
+  align-items: center;
+}
+
+.inputFile span {
+  margin-right: 6px;
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #263238;
+}
+
+.modalButton {
+  width: 727px;
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+}
+
+.modalButtonSave {
+  width: 288px;
+  height: 67px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 4px solid #6b63b5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 24px;
+
+  &:hover {
+    background: rgba(107, 99, 181, 0.6);
+  }
+
+  @media (max-width: 720px) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 480px) {
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+// transition React-Modal
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: all 0.001ms ease;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+// Remove focus input 
+textarea:focus, input:focus{
+  outline: none;
+}

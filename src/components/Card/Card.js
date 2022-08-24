@@ -5,6 +5,7 @@ import uncheck from "../../assets/uncheck.png";
 import toUpperLetters from "../../functions/toUpperLetters";
 import getStudentOrStaff from "../../functions/studentOrStaff";
 import Load from "../../assets/loading.gif";
+import Logo from '../../assets/logoDeft.png'
 export default function Card() {
   const { characters } = useSelector((state) => state.characters);
   const { favorites } = useSelector((state) => state.favorites);
@@ -33,11 +34,13 @@ export default function Card() {
                 background: bgGradients[char.house ? char.house : "NA"],
               }}
             >
+              { console.log(char.image)}
               <img
                 src={
                   char.image
+                 
                     ? char.image
-                    : "https://res.cloudinary.com/dn6unzxco/image/upload/v1642447551/jhgm3jhaicvv5uhius0u.jpg"
+                    : Logo
                 }
                 alt="img"
               />
