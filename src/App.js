@@ -13,14 +13,12 @@ export const FormContext = createContext();
 const mStyles = {
   overlay: {
     zIndex: 1020,
-    maxWidth: "1284px",
     height: "100%",
-    background: "rgba(29, 29, 29, 0.75)",
+    background: "rgba(29, 29, 29, 0.85)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    margin: "auto",
-    transition: "opacity 2000ms ease-in-out",
+    marginLeft: '-75px'
   },
   content: {
     padding: "0",

@@ -66,8 +66,14 @@ body {
   left: 926px;
 
   @media (max-width: 1284px) {
-    left: auto;
-    right: 6%;
+    left: 0;
+    right: 0;
+    margin-right: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
   }
 
   @media (max-width: 480px) {
