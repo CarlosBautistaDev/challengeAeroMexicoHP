@@ -1,6 +1,7 @@
 @use './button';
 @use './nav';
 @use './card';
+@use './modal';
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +16,42 @@ body {
   margin: auto;
   background-repeat: no-repeat;
   background-size: contain;
-  resize: both;
   background-color: #000000;
   height: 100vh;
   width: 100vw;
+  ::-webkit-scrollbar {
+    width: 19px;
+    height: 19px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border: 0px none #bfbfbf;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8b8b8;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #8c8c8c;
+  }
+  ::-webkit-scrollbar-track {
+    background: #303030;
+    border: 0px none #969696;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #2e2e2e;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }
 // HP Containers and mains
 .Main {
@@ -27,6 +60,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 
 .Menu {
   position: relative;
