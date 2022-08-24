@@ -18,11 +18,11 @@ export default function Button() {
   }
   return (
     <>
-      <button onClick={handleStudentsFilter} className={activeStudents ? 'button button__active' : 'button'}>
+      <button onClick={handleStudentsFilter} className={activeStudents ? 'button buttonActive' : 'button'}>
         <p>Estudiantes</p>
       </button>
 
-      <button onClick={handleStaffFilter} className={activeStaff ? 'button button__active' : 'button'}>
+      <button onClick={handleStaffFilter} className={activeStaff ? 'button buttonActive' : 'button'}>
         <p>Staff</p>
       </button>
     </>

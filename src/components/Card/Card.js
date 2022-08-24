@@ -1,16 +1,20 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import check from "../../assets/check.png";
 import uncheck from "../../assets/uncheck.png";
 import toUpperLetters from "../../functions/toUpperLetters";
 import getStudentOrStaff from "../../functions/studentOrStaff";
 import Load from "../../assets/loading.gif";
-import Logo from '../../assets/logoDeft.png'
+import { addNewFavorite } from "../../actions/favorites";
+import Logo from "../../assets/logoDeft.png";
+
 export default function Card() {
   const { characters } = useSelector((state) => state.characters);
   const { favorites } = useSelector((state) => state.favorites);
-
-
+  const dispatch = useDispatch();
+  function handleAddToFavorites(name) {
+    dispatch(addNewFavorite(name));
+  }
   const bgGradients = {
     Gryffindor: `linear-gradient(135deg, #FF0000 0%, #FED482 100%)`,
     Slytherin: `linear-gradient(135deg, #1C792B 0%, #82E95E 100%)`,
@@ -34,16 +38,7 @@ export default function Card() {
                 background: bgGradients[char.house ? char.house : "NA"],
               }}
             >
-              { console.log(char.image)}
-              <img
-                src={
-                  char.image
-                 
-                    ? char.image
-                    : Logo
-                }
-                alt="img"
-              />
+              <img src={char.image ? char.image : Logo} alt="img" />
             </div>
             <div className="profileInfo">
               <span className="profileInfoStatus">
@@ -51,13 +46,13 @@ export default function Card() {
                 <div
                   className="profileBookmark"
                   onClick={() => {
-                    alert();
+                    handleAddToFavorites(char.name);
                   }}
                 >
                   {favorites.find((fav) => fav.name === char.name) ? (
-                    <img src={check} alt="check" />
-                  ) : (
                     <img src={uncheck} alt="check" />
+                  ) : (
+                    <img src={check} alt="check" />
                   )}
                 </div>
               </span>
@@ -81,13 +76,13 @@ export default function Card() {
                 <div
                   className="profileBookmarkSM"
                   onClick={() => {
-                    alert();
+                    handleAddToFavorites(char.name);
                   }}
                 >
                   {favorites.find((fav) => fav.name === char.name) ? (
-                    <img src={check} alt="check" />
+                   <img src={uncheck} alt="check" />
                   ) : (
-                    <img src={uncheck} alt="check" />
+                    <img src={check} alt="check" /> 
                   )}
                 </div>
               </div>
