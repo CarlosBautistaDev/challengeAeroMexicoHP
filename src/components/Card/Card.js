@@ -35,7 +35,7 @@ export default function Card() {
             <div
               className="profilePicture"
               style={{
-                background: bgGradients[char.house ? char.house : "NA"],
+                background: bgGradients[char.house ? char.house : "data no exist"],
               }}
             >
               <img src={char.image ? char.image : Logo} alt="img" />
@@ -59,13 +59,13 @@ export default function Card() {
               <span className="profileInfoName">{char.name}</span>
               <div className="profileInfoStatusMD">
                 <strong>Cumpleaños: </strong>{" "}
-                {char.dateOfBirth ? char.dateOfBirth : "NA"} <br />
+                {char.dateOfBirth ? char.dateOfBirth : "data no exist"} <br />
                 <strong>Género: </strong>{" "}
-                {char.gender ? toUpperLetters(char.gender) : "NA"} <br />
+                {char.gender ? toUpperLetters(char.gender) : "data no exist"} <br />
                 <strong>Color de ojos: </strong>{" "}
-                {char.eyeColour ? toUpperLetters(char.eyeColour) : "NA"} <br />
+                {char.eyeColour ? toUpperLetters(char.eyeColour) : "data no exist"} <br />
                 <strong>Color de pelo: </strong>{" "}
-                {char.hairColour ? toUpperLetters(char.hairColour) : "NA"}{" "}
+                {char.hairColour ? toUpperLetters(char.hairColour) : "data no exist"}{" "}
                 <br />
               </div>
               <div className="profileInfoStatusSM">
@@ -80,9 +80,9 @@ export default function Card() {
                   }}
                 >
                   {favorites.find((fav) => fav.name === char.name) ? (
-                   <img src={uncheck} alt="check" />
+                    <img src={uncheck} alt="check" />
                   ) : (
-                    <img src={check} alt="check" /> 
+                    <img src={check} alt="check" />
                   )}
                 </div>
               </div>

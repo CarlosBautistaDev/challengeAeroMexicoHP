@@ -549,18 +549,6 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
-    },
-    {
-      "id": 1661375988094,
-      "alive": true,
-      "name": "hagrid",
-      "dateOfBirth": "2004-02-01",
-      "eyeColour": "red",
-      "hairColour": "blue",
-      "gender": "male",
-      "hogwartsStudent": true,
-      "hogwartsStaff": false,
-      "image": "blob:http://localhost:3000/dbb6e516-9e81-46a8-b16b-8ede6f55ebd5"
     }
   ]
 }

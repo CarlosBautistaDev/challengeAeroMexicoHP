@@ -227,7 +227,7 @@
 // transition React-Modal
 .ReactModal__Overlay {
   opacity: 0;
-  transition: all 0.001ms ease;
+  transition: all 1s ease;
 }
 
 .ReactModal__Overlay--after-open {

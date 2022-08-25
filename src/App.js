@@ -18,7 +18,7 @@ const mStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: '-75px'
+    marginLeft: "-75px",
   },
   content: {
     padding: "0",
@@ -33,6 +33,7 @@ function App() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getAllCharacters());
   }, [dispatch]);
