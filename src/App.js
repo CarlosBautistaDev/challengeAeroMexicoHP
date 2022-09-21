@@ -5,8 +5,8 @@ import { getAllCharacters } from "./actions/characters";
 import logo from "./assets/logo.png";
 import Card from "./components/Card/Card";
 import Nav from "./components/Nav/Nav";
-import Button from "./components/utils/Button";
 import Modals from "./components/Modal/Modals";
+import ClassButton from "./components/utils/ClassButton";
 Modal.setAppElement(document.getElementById("root"));
 
 export const FormContext = createContext();
@@ -52,7 +52,7 @@ function App() {
           <div className="SelectFilter">Selecciona tu filtro</div>
         </div>
         <div className="Buttons">
-          <Button />
+          <ClassButton />
         </div>
         <div className="Cards">
           <Card />
