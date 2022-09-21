@@ -9,8 +9,7 @@ import {
 } from "../../actions/characters";
 
 class ClassButton extends Component {
-  onCreatePost() {
-    this.props.createPostAction();
+  onCreate() {
     this.props.filterStudents();
     this.props.filterStaff();
   }
